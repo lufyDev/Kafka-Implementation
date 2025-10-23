@@ -24,7 +24,7 @@ None of these services call each other directly. They just react to events. If o
 
 That's the power of event streaming. Independent, scalable, flexible.
 
-I've always believed in practical learning, so to get the gist, I built something small - Ran Docker Compose with Kafka + Zookeeper locally, created one topic with 3 partitions, a simple Node.js producer/consumer and watched messages streaming live on different terminals. And wow, some things just clicked.
+I've always believed in practical learning, so to get the gist, I built something small - Ran Docker Compose with Kafka + Zookeeper locally (docker compose up -d), created one topic with 3 partitions, a simple Node.js producer/consumer and watched messages streaming live on different terminals. And wow, some things just clicked.
 
 Same key = same partition, always. Sent messages with odd/even keys. All odd messages landed in one partition, all even in another. Ordering guaranteed. No extra code.
 
